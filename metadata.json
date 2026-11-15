@@ -1,0 +1,6 @@
+{
+  "name": "PadhaiDesk",
+  "description": "Cozy meme-buddy Pomodoro study sanctuary with animated Indian and international characters, ambient soundscapes, and focus tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

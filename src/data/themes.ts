@@ -1,0 +1,198 @@
+import type { StudyTheme, ThemeId } from '../types/study';
+
+export const THEMES: StudyTheme[] = [
+  {
+    id: 'peach-hour',
+    name: 'Peach Hour',
+    subtitle: 'Golden sunbeams',
+    isDark: false,
+    atmosphere: 'sunbeams',
+    swatchColors: ['#FBF4EC', '#F3C6A5', '#C25934'],
+    tokens: {
+      pageBg: '#EEDCC8',
+      backgroundImageUrl: '/backgrounds/peach-hour.jpg',
+      backdropScrim:
+        'linear-gradient(180deg, rgba(255, 245, 232, 0.16) 0%, rgba(235, 202, 172, 0.34) 100%)',
+      stageBackdropTint:
+        'linear-gradient(180deg, rgba(255, 240, 220, 0.08) 0%, rgba(76, 46, 26, 0.18) 100%)',
+      surfaceBg: 'rgba(255, 250, 244, 0.56)',
+      surfaceMutedBg: 'rgba(255, 245, 234, 0.42)',
+      borderColor: 'rgba(255, 255, 255, 0.78)',
+      glassShadow:
+        '0 28px 70px -14px rgba(72, 42, 20, 0.22), 0 8px 24px rgba(72, 42, 20, 0.10), inset 0 1.5px 1px rgba(255, 255, 255, 0.95), inset 1px 0 0 rgba(255, 255, 255, 0.55), inset 0 -1px 0 rgba(160, 118, 86, 0.16)',
+      glassHighlight:
+        'linear-gradient(135deg, rgba(255, 255, 255, 0.64) 0%, rgba(255, 255, 255, 0.14) 44%, rgba(255, 248, 240, 0.36) 100%)',
+      textPrimary: '#160D08',
+      textSecondary: '#3C2A20',
+      accentBg: '#C25934',
+      accentHoverBg: '#A94927',
+      accentText: '#FFFFFF',
+      accentSoftBg: 'rgba(242, 198, 168, 0.74)',
+      accentInk: '#782B11',
+      stageWallTop: '#F3E3D2',
+      stageWallBottom: '#E6CFB8',
+      windowSkyTop: '#F7B787',
+      windowSkyBottom: '#FCE2C4',
+      windowFrame: '#8E6245',
+      deskTop: '#C98F60',
+      deskFront: '#9F673D',
+      lampGlow: 'rgba(255, 204, 132, 0.55)',
+    },
+  },
+  {
+    id: 'monsoon-chai',
+    name: 'Monsoon Chai',
+    subtitle: 'Rainy window',
+    isDark: true,
+    atmosphere: 'rain',
+    swatchColors: ['#182328', '#334B54', '#E09145'],
+    tokens: {
+      pageBg: '#10181C',
+      backgroundImageUrl: '/backgrounds/monsoon-chai.jpg',
+      backdropScrim:
+        'linear-gradient(180deg, rgba(10, 17, 21, 0.24) 0%, rgba(12, 20, 25, 0.44) 100%)',
+      stageBackdropTint:
+        'linear-gradient(180deg, rgba(16, 28, 34, 0.10) 0%, rgba(10, 16, 20, 0.30) 100%)',
+      surfaceBg: 'rgba(15, 25, 31, 0.52)',
+      surfaceMutedBg: 'rgba(24, 38, 46, 0.38)',
+      borderColor: 'rgba(218, 240, 248, 0.30)',
+      glassShadow:
+        '0 28px 70px -12px rgba(0, 0, 0, 0.62), 0 8px 24px rgba(0, 0, 0, 0.32), inset 0 1.5px 1px rgba(255, 255, 255, 0.30), inset 1px 0 0 rgba(255, 255, 255, 0.14), inset 0 -1px 0 rgba(0, 0, 0, 0.40)',
+      glassHighlight:
+        'linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.03) 45%, rgba(214, 238, 248, 0.09) 100%)',
+      textPrimary: '#F8F5EF',
+      textSecondary: '#CBDCE2',
+      accentBg: '#E09145',
+      accentHoverBg: '#C97D35',
+      accentText: '#191410',
+      accentSoftBg: 'rgba(224, 145, 69, 0.28)',
+      accentInk: '#F7C48E',
+      stageWallTop: '#1E2D33',
+      stageWallBottom: '#172328',
+      windowSkyTop: '#243A44',
+      windowSkyBottom: '#3B5661',
+      windowFrame: '#4C5F66',
+      deskTop: '#8C6244',
+      deskFront: '#63412B',
+      lampGlow: 'rgba(244, 176, 98, 0.42)',
+    },
+  },
+  {
+    id: 'after-hours',
+    name: 'After-Hours Library',
+    subtitle: 'Midnight mahogany',
+    isDark: true,
+    atmosphere: 'motes',
+    swatchColors: ['#141720', '#242B3A', '#D4A54A'],
+    tokens: {
+      pageBg: '#0E1118',
+      backgroundImageUrl: '/backgrounds/after-hours.jpg',
+      backdropScrim:
+        'linear-gradient(180deg, rgba(10, 12, 19, 0.26) 0%, rgba(12, 14, 22, 0.46) 100%)',
+      stageBackdropTint:
+        'linear-gradient(180deg, rgba(16, 19, 29, 0.12) 0%, rgba(10, 12, 18, 0.34) 100%)',
+      surfaceBg: 'rgba(16, 20, 32, 0.54)',
+      surfaceMutedBg: 'rgba(28, 34, 52, 0.40)',
+      borderColor: 'rgba(242, 214, 152, 0.30)',
+      glassShadow:
+        '0 28px 70px -12px rgba(0, 0, 0, 0.65), 0 8px 24px rgba(0, 0, 0, 0.34), inset 0 1.5px 1px rgba(255, 255, 255, 0.28), inset 1px 0 0 rgba(255, 255, 255, 0.12), inset 0 -1px 0 rgba(0, 0, 0, 0.42)',
+      glassHighlight:
+        'linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.03) 45%, rgba(242, 214, 152, 0.09) 100%)',
+      textPrimary: '#FAF5EB',
+      textSecondary: '#CDD5EA',
+      accentBg: '#D4A54A',
+      accentHoverBg: '#BD8F37',
+      accentText: '#16130C',
+      accentSoftBg: 'rgba(212, 165, 74, 0.28)',
+      accentInk: '#F4D084',
+      stageWallTop: '#1E2434',
+      stageWallBottom: '#161B27',
+      windowSkyTop: '#101829',
+      windowSkyBottom: '#1F2C47',
+      windowFrame: '#5C4430',
+      deskTop: '#7D5134',
+      deskFront: '#58351E',
+      lampGlow: 'rgba(232, 189, 102, 0.44)',
+    },
+  },
+  {
+    id: 'secret-garden',
+    name: 'Secret Garden',
+    subtitle: 'Drifting fireflies',
+    isDark: true,
+    atmosphere: 'fireflies',
+    swatchColors: ['#15211B', '#253A2F', '#8FBD7E'],
+    tokens: {
+      pageBg: '#0F1813',
+      backgroundImageUrl: '/backgrounds/secret-garden.jpg',
+      backdropScrim:
+        'linear-gradient(180deg, rgba(11, 20, 15, 0.24) 0%, rgba(12, 22, 17, 0.44) 100%)',
+      stageBackdropTint:
+        'linear-gradient(180deg, rgba(16, 28, 22, 0.12) 0%, rgba(10, 18, 14, 0.30) 100%)',
+      surfaceBg: 'rgba(15, 28, 21, 0.52)',
+      surfaceMutedBg: 'rgba(26, 44, 34, 0.38)',
+      borderColor: 'rgba(190, 230, 180, 0.30)',
+      glassShadow:
+        '0 28px 70px -12px rgba(0, 0, 0, 0.62), 0 8px 24px rgba(0, 0, 0, 0.32), inset 0 1.5px 1px rgba(255, 255, 255, 0.28), inset 1px 0 0 rgba(255, 255, 255, 0.12), inset 0 -1px 0 rgba(0, 0, 0, 0.40)',
+      glassHighlight:
+        'linear-gradient(135deg, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.03) 45%, rgba(190, 230, 180, 0.09) 100%)',
+      textPrimary: '#F4F9F2',
+      textSecondary: '#C6DDD0',
+      accentBg: '#8FBD7E',
+      accentHoverBg: '#7AA969',
+      accentText: '#101B13',
+      accentSoftBg: 'rgba(143, 189, 126, 0.28)',
+      accentInk: '#BCE6A8',
+      stageWallTop: '#1E3026',
+      stageWallBottom: '#16241C',
+      windowSkyTop: '#14261E',
+      windowSkyBottom: '#264435',
+      windowFrame: '#576853',
+      deskTop: '#96724D',
+      deskFront: '#6E4E30',
+      lampGlow: 'rgba(182, 224, 146, 0.34)',
+    },
+  },
+  {
+    id: 'hostel-night',
+    name: 'Hostel Night',
+    subtitle: '2 AM fairy lights',
+    isDark: true,
+    atmosphere: 'fairy-lights',
+    swatchColors: ['#171625', '#27253F', '#E28C68'],
+    tokens: {
+      pageBg: '#100F1B',
+      backgroundImageUrl: '/backgrounds/hostel-night.jpg',
+      backdropScrim:
+        'linear-gradient(180deg, rgba(14, 12, 24, 0.24) 0%, rgba(14, 12, 24, 0.44) 100%)',
+      stageBackdropTint:
+        'linear-gradient(180deg, rgba(20, 18, 36, 0.10) 0%, rgba(12, 10, 22, 0.30) 100%)',
+      surfaceBg: 'rgba(20, 17, 36, 0.54)',
+      surfaceMutedBg: 'rgba(34, 30, 58, 0.40)',
+      borderColor: 'rgba(246, 202, 180, 0.30)',
+      glassShadow:
+        '0 28px 70px -12px rgba(0, 0, 0, 0.65), 0 8px 24px rgba(0, 0, 0, 0.34), inset 0 1.5px 1px rgba(255, 255, 255, 0.30), inset 1px 0 0 rgba(255, 255, 255, 0.14), inset 0 -1px 0 rgba(0, 0, 0, 0.42)',
+      glassHighlight:
+        'linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.03) 45%, rgba(246, 202, 180, 0.09) 100%)',
+      textPrimary: '#FAF5F1',
+      textSecondary: '#D2CDE6',
+      accentBg: '#E28C68',
+      accentHoverBg: '#CC7855',
+      accentText: '#1C1310',
+      accentSoftBg: 'rgba(226, 140, 104, 0.28)',
+      accentInk: '#F7BCA2',
+      stageWallTop: '#211F36',
+      stageWallBottom: '#181629',
+      windowSkyTop: '#131228',
+      windowSkyBottom: '#28254B',
+      windowFrame: '#4C4A6B',
+      deskTop: '#987153',
+      deskFront: '#6E4C34',
+      lampGlow: 'rgba(242, 174, 130, 0.4)',
+    },
+  },
+];
+
+export function getThemeById(id: ThemeId): StudyTheme {
+  return THEMES.find((t) => t.id === id) ?? THEMES[0];
+}

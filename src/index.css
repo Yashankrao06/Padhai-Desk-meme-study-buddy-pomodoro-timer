@@ -1,0 +1,277 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-sans: 'Manrope', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    margin: 0;
+    letter-spacing: -0.005em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-display, .font-quote {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Ultra-Frosted Glassmorphism Surface System */
+.glass-panel {
+  backdrop-filter: blur(38px) saturate(215%) contrast(1.03);
+  -webkit-backdrop-filter: blur(38px) saturate(215%) contrast(1.03);
+  position: relative;
+}
+
+.glass-tile {
+  backdrop-filter: blur(22px) saturate(185%);
+  -webkit-backdrop-filter: blur(22px) saturate(185%);
+}
+
+/* Custom Range Slider Styling for Soundscape */
+input[type="range"].glass-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 7px;
+  border-radius: 9999px;
+  outline: none;
+}
+
+input[type="range"].glass-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: currentColor;
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.38);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+input[type="range"].glass-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+input[type="range"].glass-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: currentColor;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.38);
+  cursor: pointer;
+}
+
+/* Character & Desk Keyframe Animations */
+@keyframes desk-breathe {
+  0%, 100% { transform: translateY(0px) scaleY(1); }
+  50% { transform: translateY(-2px) scaleY(1.012); }
+}
+
+@keyframes hand-write {
+  0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
+  25% { transform: translate(4px, -2px) rotate(-4deg); }
+  50% { transform: translate(8px, 1px) rotate(2deg); }
+  75% { transform: translate(3px, 2px) rotate(-2deg); }
+}
+
+@keyframes hand-type {
+  0%, 100% { transform: translateY(0px); }
+  30% { transform: translateY(-3px); }
+  60% { transform: translateY(1px); }
+}
+
+@keyframes sip-cup {
+  0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
+  40%, 60% { transform: translate(-8px, -18px) rotate(-14deg); }
+}
+
+@keyframes head-bob {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+  25% { transform: translateY(3px) rotate(1.8deg) scale(1.008); }
+  50% { transform: translateY(-1px) rotate(-1.2deg) scale(1.012); }
+  75% { transform: translateY(3px) rotate(1.5deg) scale(1.006); }
+}
+
+@keyframes study-focus {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+  30% { transform: translateY(-2.5px) rotate(-0.8deg) scale(1.008); }
+  65% { transform: translateY(1.5px) rotate(0.9deg) scale(1.004); }
+}
+
+@keyframes sip-sway {
+  0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
+  45% { transform: translate(6px, -3px) rotate(1.6deg); }
+}
+
+@keyframes stretch-sway {
+  0% { transform: translateY(0px) scaleY(1); }
+  35% { transform: translateY(-7px) scaleY(1.035) rotate(-1.4deg); }
+  70% { transform: translateY(-5px) scaleY(1.028) rotate(1.4deg); }
+  100% { transform: translateY(0px) scaleY(1); }
+}
+
+@keyframes head-think {
+  0%, 100% { transform: rotate(0deg) translateY(0px); }
+  50% { transform: rotate(-2.8deg) translateY(-3px); }
+}
+
+@keyframes head-snooze {
+  0%, 100% { transform: translateY(3px) rotate(2.5deg) scale(0.99); }
+  50% { transform: translateY(8px) rotate(5deg) scale(0.985); }
+}
+
+@keyframes reaction-bounce {
+  0% { transform: scale(1) translateY(0px); }
+  30% { transform: scale(1.045) translateY(-8px); }
+  65% { transform: scale(0.99) translateY(2px); }
+  100% { transform: scale(1) translateY(0px); }
+}
+
+@keyframes eq-bar {
+  0%, 100% { transform: scaleY(0.32); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes eye-blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  96% { transform: scaleY(0.1); }
+}
+
+@keyframes steam-rise {
+  0% { transform: translateY(0px) scaleX(1); opacity: 0; }
+  25% { opacity: 0.65; }
+  75% { opacity: 0.35; }
+  100% { transform: translateY(-22px) scaleX(1.25); opacity: 0; }
+}
+
+@keyframes zzz-float {
+  0% { transform: translate(0px, 0px) scale(0.75); opacity: 0; }
+  20% { opacity: 0.9; }
+  100% { transform: translate(16px, -34px) scale(1.15); opacity: 0; }
+}
+
+@keyframes reaction-pop {
+  0% { transform: translateY(8px) scale(0.6); opacity: 0; }
+  25% { transform: translateY(-8px) scale(1.12); opacity: 1; }
+  75% { transform: translateY(-20px) scale(1); opacity: 0.95; }
+  100% { transform: translateY(-34px) scale(0.9); opacity: 0; }
+}
+
+@keyframes fan-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes ink-scribble {
+  0% { stroke-dashoffset: 48; opacity: 0.35; }
+  50% { stroke-dashoffset: 0; opacity: 0.9; }
+  100% { stroke-dashoffset: 0; opacity: 0.45; }
+}
+
+@keyframes rain-fall {
+  0% { transform: translate3d(14px, -30px, 0); opacity: 0; }
+  15% { opacity: 0.55; }
+  85% { opacity: 0.55; }
+  100% { transform: translate3d(-24px, 340px, 0); opacity: 0; }
+}
+
+@keyframes firefly-drift {
+  0%, 100% { transform: translate3d(0px, 0px, 0) scale(0.85); opacity: 0.25; }
+  35% { transform: translate3d(14px, -18px, 0) scale(1.15); opacity: 0.9; }
+  70% { transform: translate3d(-10px, -8px, 0) scale(0.95); opacity: 0.5; }
+}
+
+@keyframes mote-float {
+  0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.15; }
+  50% { transform: translateY(-18px) translateX(8px); opacity: 0.65; }
+}
+
+@keyframes fairy-twinkle {
+  0%, 100% { opacity: 0.45; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+@keyframes vine-sway {
+  0%, 100% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@keyframes cloud-drift {
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(10px); }
+}
+
+.anim-breathe { animation: desk-breathe 4.2s ease-in-out infinite; transform-origin: center bottom; }
+.anim-study-focus { animation: study-focus 3.6s ease-in-out infinite; transform-origin: center bottom; }
+.anim-sip-sway { animation: sip-sway 3.2s ease-in-out infinite; transform-origin: center bottom; }
+.anim-stretch-sway { animation: stretch-sway 1.4s cubic-bezier(0.16, 1, 0.3, 1); transform-origin: center bottom; }
+.anim-hand-write { animation: hand-write 1.3s ease-in-out infinite; transform-origin: center; }
+.anim-hand-type { animation: hand-type 0.55s ease-in-out infinite; }
+.anim-sip-cup { animation: sip-cup 3.2s ease-in-out infinite; transform-origin: center bottom; }
+.anim-head-bob { animation: head-bob 1.6s ease-in-out infinite; transform-origin: center bottom; }
+.anim-head-think { animation: head-think 3.4s ease-in-out infinite; transform-origin: center bottom; }
+.anim-head-snooze { animation: head-snooze 3.8s ease-in-out infinite; transform-origin: center bottom; }
+.anim-reaction-bounce { animation: reaction-bounce 0.65s cubic-bezier(0.22, 1, 0.36, 1); transform-origin: center bottom; }
+.anim-eq-1 { animation: eq-bar 0.85s ease-in-out infinite; transform-origin: bottom; }
+.anim-eq-2 { animation: eq-bar 0.72s ease-in-out 0.2s infinite; transform-origin: bottom; }
+.anim-eq-3 { animation: eq-bar 0.96s ease-in-out 0.4s infinite; transform-origin: bottom; }
+.anim-eye-blink { animation: eye-blink 4.6s ease-in-out infinite; transform-origin: center; }
+.anim-steam-1 { animation: steam-rise 2.6s ease-out infinite; }
+.anim-steam-2 { animation: steam-rise 2.6s ease-out 1.1s infinite; }
+.anim-zzz-1 { animation: zzz-float 2.8s ease-out infinite; }
+.anim-zzz-2 { animation: zzz-float 2.8s ease-out 0.9s infinite; }
+.anim-zzz-3 { animation: zzz-float 2.8s ease-out 1.8s infinite; }
+.anim-reaction-pop { animation: reaction-pop 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.anim-fan-spin { animation: fan-spin 0.85s linear infinite; transform-origin: center; }
+.anim-ink-scribble { stroke-dasharray: 48; animation: ink-scribble 2.2s ease-in-out infinite; }
+.anim-rain { animation: rain-fall 1.6s linear infinite; }
+.anim-firefly { animation: firefly-drift 5.2s ease-in-out infinite; }
+.anim-mote { animation: mote-float 6s ease-in-out infinite; }
+.anim-twinkle { animation: fairy-twinkle 2.8s ease-in-out infinite; }
+.anim-vine { animation: vine-sway 6.5s ease-in-out infinite; transform-origin: top center; }
+.anim-cloud { animation: cloud-drift 14s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-breathe,
+  .anim-study-focus,
+  .anim-sip-sway,
+  .anim-stretch-sway,
+  .anim-hand-write,
+  .anim-hand-type,
+  .anim-sip-cup,
+  .anim-head-bob,
+  .anim-head-think,
+  .anim-head-snooze,
+  .anim-reaction-bounce,
+  .anim-eq-1,
+  .anim-eq-2,
+  .anim-eq-3,
+  .anim-eye-blink,
+  .anim-steam-1,
+  .anim-steam-2,
+  .anim-zzz-1,
+  .anim-zzz-2,
+  .anim-zzz-3,
+  .anim-fan-spin,
+  .anim-ink-scribble,
+  .anim-rain,
+  .anim-firefly,
+  .anim-mote,
+  .anim-twinkle,
+  .anim-vine,
+  .anim-cloud {
+    animation: none !important;
+  }
+}
